@@ -18,7 +18,7 @@ ON_SERVER = False
 INTERVAL = 60
 
 # set manual datetime
-MANUAL_DATETIME = "2020 05 13 11 49 00"
+MANUAL_DATETIME = "2020 05 15 18 42 00"
 
 utc = pytz.UTC
 local = pytz.timezone('US/Central')
@@ -111,7 +111,8 @@ for char in h2R:
         # increment counter
         i += 1
 
-code += h2R[-1]
+#code += h2R[(len(h2R)/2)-1]
+#code += h2R[(len(h2R)/2)]
 # print each step's result if debugging
 if (DEBUG):
     print("Current (UTC):  "), 
@@ -130,4 +131,5 @@ if (DEBUG):
     print(code)
 # else print the code
 else:
-    print(code)
+    print "cyberstorm" + code + h2R[((len(h2R)/2)-1)] + h2R[(len(h2R)/2)]
+    print "cyberstorm" + code + h2R[(len(h2R)/2)] + h2R[((len(h2R)/2)+1)]
